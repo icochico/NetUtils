@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center">
+    <!-- General Statistics for packet sent, byte sent, packets received, bytes received, packet loss etc. here -->
+    <TextView
+            android:id="@+id/tvEmptyLine0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    <TextView
+            android:id="@+id/tvGeneralStatistics"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEmptyLine0"
+            android:text="@string/tvGeneralStatistics"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_blue_light"
+            android:textIsSelectable="false"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMessagesSent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGeneralStatistics"
+            android:text="@string/tvMessagesSent"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMessagesSentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:text=" 0"
+            android:layout_toRightOf="@+id/tvMessagesSent"
+            android:layout_below="@+id/tvGeneralStatistics"/>
+    <TextView
+            android:id="@+id/tvBytesSent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBytesSent"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvMessagesSent"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvBytesSentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvBytesSent"
+            android:layout_below="@+id/tvMessagesSent"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0 B"/>
+    <TextView
+            android:id="@+id/tvThroughputSent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Throughput (sent): "
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvBytesSent"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvThroughputSentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvThroughputSent"
+            android:layout_below="@+id/tvBytesSent"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0 B/s"/>
+    <TextView
+            android:id="@+id/tvPacketLossSent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvPacketLossSent"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvThroughputSent"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvPacketLossSentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvPacketLossSent"
+            android:layout_below="@+id/tvThroughputSent"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0"/>
+    <TextView
+            android:id="@+id/tvMessagesReceived"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvPacketLossSent"
+            android:text="@string/tvMessagesReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMessagesReceivedValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvMessagesReceived"
+            android:layout_below="@+id/tvPacketLossSent"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textIsSelectable="true"
+            android:text=" 0"/>
+    <TextView
+            android:id="@+id/tvBytesReceived"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBytesReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvMessagesReceived"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvBytesReceivedValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvBytesReceived"
+            android:layout_below="@+id/tvMessagesReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0 B"/>
+    <TextView
+            android:id="@+id/tvPacketLossReceived"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvPacketLossReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvBytesReceived"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvPacketLossReceivedValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvPacketLossReceived"
+            android:layout_below="@+id/tvBytesReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0"/>
+
+    <TextView
+            android:id="@+id/tvThroughputReceived"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Throughput (received): "
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvPacketLossReceived"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvThroughputReceivedValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvThroughputReceived"
+            android:layout_below="@+id/tvPacketLossReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0 B/s"/>
+    <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbProgress"
+            android:layout_gravity="center"
+            android:layout_alignRight="@+id/tvBytesReceivedValue"
+            android:layout_below="@+id/tvMessagesSent"
+            android:layout_marginRight="60dp"/>
+
+    <!-- Mockets statistics here-->
+
+    <TextView
+            android:id="@+id/tvEmptyLine2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvThroughputReceived"
+            android:text=""/>
+    <TextView
+            android:id="@+id/tvMocketsStatistics"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEmptyLine2"
+            android:text="@string/tvMocketsStatistics"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_blue_light"
+            android:textIsSelectable="false"
+            android:textSize="18dp"/>
+
+    <TextView
+            android:id="@+id/tvMocketsLastContactTime"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvLastContactTime"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvMocketsStatistics"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMocketsLastContactTimeValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvMocketsLastContactTime"
+            android:layout_below="@+id/tvMocketsStatistics"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" n/a"/>
+
+    <TextView
+            android:id="@+id/tvMocketsPacketsSent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMocketsLastContactTime"
+            android:text="@string/tvPacketsSent"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMocketsPacketsSentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:text=" 0"
+            android:layout_toRightOf="@+id/tvMocketsPacketsSent" android:layout_below="@+id/tvMocketsLastContactTime"/>
+    <TextView
+            android:id="@+id/tvMocketsBytesSent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBytesSent"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvMocketsPacketsSent"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMocketsBytesSentValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvMocketsBytesSent"
+            android:layout_below="@+id/tvMocketsPacketsSent"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0 B"/>
+
+    <TextView
+            android:id="@+id/tvMocketsPacketsReceived"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMocketsBytesSent"
+            android:text="@string/tvPacketsReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMocketsPacketsReceivedValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvMocketsPacketsReceived"
+            android:layout_below="@+id/tvMocketsBytesSent"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textIsSelectable="true"
+            android:text=" 0"/>
+    <TextView
+            android:id="@+id/tvMocketsBytesReceived"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBytesReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/tvMocketsPacketsReceived"
+            android:textSize="18dp"/>
+    <TextView
+            android:id="@+id/tvMocketsBytesReceivedValue"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvMocketsBytesReceived"
+            android:layout_below="@+id/tvMocketsPacketsReceived"
+            android:typeface="normal"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:text=" 0 B"/>
+    <TextView android:id="@+id/tvMocketsDuplicatedDiscardedPackets"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Duplicated Discarded Packets: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp" android:layout_alignLeft="@+id/tvMessagesSent"
+              android:layout_below="@+id/tvMocketsBytesReceived"/>
+    <TextView android:id="@+id/tvMocketsDuplicatedDiscardedPacketsValue" android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:typeface="normal"
+              android:textColor="@android:color/white" android:textSize="18dp" android:singleLine="true"
+              android:lines="1" android:text="0"
+              android:layout_toRightOf="@+id/tvMocketsDuplicatedDiscardedPackets"
+              android:layout_below="@+id/tvMocketsBytesReceived"/>
+    <TextView android:id="@+id/tvMocketsNoRoomDiscardedPackets"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="No Room Discarded Packets: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp" android:layout_alignLeft="@+id/tvMessagesSent"
+              android:layout_below="@+id/tvMocketsDuplicatedDiscardedPackets"/>
+    <TextView android:id="@+id/tvMocketsNoRoomDiscardedPacketsValue" android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:typeface="normal"
+              android:textColor="@android:color/white" android:textSize="18dp" android:singleLine="true"
+              android:lines="1" android:text="0"
+              android:layout_toRightOf="@+id/tvMocketsNoRoomDiscardedPackets"
+              android:layout_below="@+id/tvMocketsDuplicatedDiscardedPackets"/>
+    <TextView android:id="@+id/tvMocketsReassemblySkippedDiscardedPackets"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Reassembly Skipped Discarded Packets: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp" android:layout_alignLeft="@+id/tvMessagesSent"
+              android:layout_below="@+id/tvMocketsNoRoomDiscardedPackets"/>
+    <TextView android:id="@+id/tvMocketsReassemblySkippedDiscardedPacketsValue" android:layout_width="104dp"
+              android:layout_height="wrap_content"
+              android:typeface="normal"
+              android:textColor="@android:color/white" android:textSize="18dp" android:singleLine="true"
+              android:lines="1" android:text="0"
+              android:layout_toRightOf="@+id/tvMocketsReassemblySkippedDiscardedPackets"
+              android:layout_below="@+id/tvMocketsNoRoomDiscardedPackets"
+              android:layout_alignRight="@+id/tvEmptyLine0"/>
+    <TextView android:id="@+id/tvMocketsEstimatedRoundTripTime"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Estimated Round Trip Time: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp" android:layout_alignLeft="@+id/tvMessagesSent"
+              android:layout_below="@+id/tvMocketsReassemblySkippedDiscardedPackets"/>
+    <TextView android:id="@+id/tvMocketsEstimatedRoundTripTimeValue" android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:typeface="normal"
+              android:textColor="@android:color/white" android:textSize="18dp" android:singleLine="true"
+              android:lines="1" android:text="n/a"
+              android:layout_toRightOf="@+id/tvMocketsEstimatedRoundTripTime"
+              android:layout_below="@+id/tvMocketsReassemblySkippedDiscardedPackets"/>
+    <TextView android:id="@+id/tvMocketsUnacknowledgedDataSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Unacknowledged Data Size: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp"
+              android:layout_alignLeft="@+id/tvMessagesSent" android:layout_below="@+id/tvMocketsEstimatedRoundTripTime"/>
+    <TextView android:id="@+id/tvMocketsUnacknowledgedDataSizeValue" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:typeface="normal" android:textColor="@android:color/white" android:textSize="18dp"
+              android:singleLine="true" android:lines="1" android:text="0 B"
+              android:layout_toRightOf="@+id/tvMocketsEstimatedRoundTripTime"
+              android:layout_below="@+id/tvMocketsEstimatedRoundTripTime"/>
+    <TextView android:id="@+id/tvMocketsPendingDataSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Pending Data Size: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp"
+              android:layout_alignLeft="@+id/tvMessagesSent" android:layout_below="@+id/tvMocketsUnacknowledgedDataSize"/>
+    <TextView android:id="@+id/tvMocketsPendingDataSizeValue" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:typeface="normal" android:textColor="@android:color/white" android:textSize="18dp"
+              android:singleLine="true" android:lines="1" android:text="0 B"
+              android:layout_toRightOf="@+id/tvMessagesReceived"
+              android:layout_below="@+id/tvMocketsUnacknowledgedDataSize"/>
+    <TextView android:id="@+id/tvMocketsPendingPacketQueueSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Pending Packet Queue Size: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp"
+              android:layout_alignLeft="@+id/tvMessagesSent" android:layout_below="@+id/tvMocketsPendingDataSize"/>
+    <TextView android:id="@+id/tvMocketsPendingPacketQueueSizeValue" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:typeface="normal" android:textColor="@android:color/white" android:textSize="18dp"
+              android:singleLine="true" android:lines="1" android:text="0"
+              android:layout_toRightOf="@+id/tvMocketsEstimatedRoundTripTime"
+              android:layout_below="@+id/tvMocketsPendingDataSize"/>
+    <TextView android:id="@+id/tvMocketsReliableSequencedDataSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Reliable Sequenced Data Size: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp"
+              android:layout_alignLeft="@+id/tvMessagesSent" android:layout_below="@+id/tvMocketsPendingPacketQueueSize"/>
+    <TextView android:id="@+id/tvMocketsReliableSequencedDataSizeValue" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:typeface="normal" android:textColor="@android:color/white" android:textSize="18dp"
+              android:singleLine="true" android:lines="1" android:text="0 B"
+              android:layout_toRightOf="@+id/tvMocketsDuplicatedDiscardedPackets"
+              android:layout_below="@+id/tvMocketsPendingPacketQueueSize"/>
+    <TextView android:id="@+id/tvMocketsReliableSequencedPacketQueueSize" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:text="Reliable Sequenced Packet Queue Size: " android:typeface="normal"
+              android:textColor="@android:color/holo_green_dark" android:textIsSelectable="false"
+              android:textSize="18dp"
+              android:layout_alignLeft="@+id/tvMessagesSent" android:layout_below="@+id/tvMocketsReliableSequencedDataSize"/>
+    <TextView android:id="@+id/tvMocketsReliableSequencedPacketQueueSizeValue" android:layout_width="225dp" android:layout_height="wrap_content"
+              android:typeface="normal" android:textColor="@android:color/white" android:textSize="18dp"
+              android:singleLine="true" android:lines="1" android:text="0"
+              android:layout_toRightOf="@+id/tvMocketsReliableSequencedPacketQueueSize"
+              android:layout_below="@+id/tvMocketsReliableSequencedDataSize"/>
+
+
+</RelativeLayout>

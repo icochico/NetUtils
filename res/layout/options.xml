@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center_vertical">
+    <TextView
+            android:id="@+id/tvMessageSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvMessageSize"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:textSize="18dp"
+            android:layout_gravity="center"/>
+    <RelativeLayout
+            android:id="@+id/rlMessageOptions"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:clickable="false"
+            android:gravity="center_vertical">
+        <SeekBar
+                android:layout_width="192dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sbMessageSize"
+                android:layout_gravity="center"
+                android:progress="@string/netutils_msg_size_default"
+                android:max="@string/netutils_msg_size_max"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    <RelativeLayout
+            android:id="@+id/rlMessageSize"
+            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:clickable="false"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal">
+        <EditText
+                android:id="@+id/etMessageSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false"
+                android:textSize="18dp"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLines="1"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerVertical="true" android:layout_alignParentLeft="true"/>
+
+        <Spinner
+                android:id="@+id/spnByteUnit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false"
+                android:textSize="18dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView
+            android:id="@+id/tvInterval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Interval (msec)"
+            android:typeface="normal"
+            android:textColor="@android:color/holo_green_dark"
+            android:textIsSelectable="false"
+            android:textSize="18dp" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:layout_gravity="center"/>
+    <RelativeLayout
+            android:id="@+id/rlInterval"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:clickable="false"
+            android:gravity="center_vertical">
+        <Spinner
+                android:id="@+id/spnInterval"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false"
+                android:textSize="18dp"
+                android:layout_alignParentLeft="true" android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"/>
+        <EditText
+                android:id="@+id/etInterval"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false"
+                android:textSize="18dp"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLines="1"
+                android:layout_alignParentRight="true" android:layout_alignTop="@+id/spnInterval"/>
+    </RelativeLayout>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    <Button
+            android:layout_width="214dp"
+            android:layout_height="120dp"
+            android:text="Set"
+            android:id="@+id/btSetOptions" android:layout_gravity="center" android:textSize="24dp"/>
+
+</LinearLayout>

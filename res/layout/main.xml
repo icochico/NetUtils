@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <TextView
+            android:id="@+id/tvDeviceModel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvDeviceModel"
+            android:layout_marginLeft="7dp"/>
+    <TextView
+            android:id="@+id/tvBuildVersion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvBuildVersion"
+            android:layout_marginLeft="7dp"/>
+    <TextView
+            android:id="@+id/tvConfDir"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/tvConfDir"
+            android:layout_marginLeft="7dp"/>
+    <RelativeLayout
+            android:id="@+id/rlInterface"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:clickable="false">
+        <TextView android:id="@+id/tvNetInterface"
+                  android:layout_width="180dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tvNetworkInterface"
+                  android:textColor="@android:color/holo_green_dark"
+                  android:textSize="18dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="5dp"
+                  android:layout_centerVertical="true"/>
+        <Spinner
+                android:id="@+id/spnNetInterface"
+                android:layout_width="600dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="120dp"
+                android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/rlProtocol"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:clickable="false">
+        <TextView android:id="@+id/tvProtocol"
+                  android:layout_width="180dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tvNetworkProtocol"
+                  android:textColor="@android:color/holo_green_dark"
+                  android:textSize="18dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="5dp"
+                  android:layout_centerVertical="true"/>
+        <Spinner
+                android:id="@+id/spnProtocol"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:clickable="true"
+                android:layout_toRightOf="@+id/tvProtocol"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:id="@+id/rlMode"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:clickable="false">
+        <TextView android:id="@+id/tvMode"
+                  android:layout_width="180dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tvMode"
+                  android:textColor="@android:color/holo_green_dark"
+                  android:textSize="18dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="5dp"
+                  android:layout_centerVertical="true"/>
+        <Spinner
+                android:id="@+id/spnMode"
+                android:layout_width="239dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true" android:layout_marginLeft="62dp"
+                android:layout_alignRight="@+id/tvMode"/>
+        <Button android:layout_width="200dp" android:layout_height="wrap_content" android:text="Options.."
+                android:id="@+id/btOptions" android:layout_gravity="center"
+                android:textSize="18dp"
+                android:layout_alignBottom="@+id/spnMode" android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tvMode"/>
+    </RelativeLayout>
+    <ProgressBar
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbProgress"
+            android:layout_gravity="center"
+            />
+    <RelativeLayout
+            android:id="@+id/rlTarget"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:clickable="false">
+        <TextView android:id="@+id/tvTargetHost"
+                  android:layout_width="60dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/tvTargetHost"
+                  android:textColor="@android:color/holo_green_dark"
+                  android:textSize="18dp"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginLeft="5dp"
+                  android:layout_alignBaseline="@+id/btFindTarget"/>
+
+        <AutoCompleteTextView android:id="@+id/actvSelectedTargetHost"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:hint="@string/actvSelectedTargetHost"
+                              android:textColor="@android:color/holo_green_dark"
+                              android:textSize="18dp"
+                              android:layout_toRightOf="@+id/tvTargetHost"
+                              android:layout_alignTop="@+id/btFindTarget"
+                              android:lines="1"
+                              android:maxLines="1" android:layout_toLeftOf="@+id/btFindTarget"
+                              android:singleLine="true"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btFindTarget"
+                android:id="@+id/btFindTarget"
+                android:layout_gravity="center"
+                android:textSize="18dp"
+                android:layout_alignParentRight="true" android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+    <LinearLayout
+            android:id="@+id/llControls"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_gravity="right">
+        <Button
+                android:id="@+id/btStart"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="118dp"
+                android:text="@string/btStart" android:textSize="30dp"/>
+        <Button
+                android:id="@+id/btStop"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="fill_parent"
+                android:text="@string/btStop"
+                android:textSize="30dp"/>
+    </LinearLayout>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:text="@string/btStatistics"
+            android:id="@+id/btStatistics" android:layout_gravity="center" android:textSize="24dp"/>
+</LinearLayout>
+

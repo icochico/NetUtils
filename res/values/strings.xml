@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IHMC NetUtils</string>
+
+    <!-- FILESYSTEM -->
+    <string name="app_dir">netutils</string>
+    <string name="app_logs_dir">logs</string>
+    <string name="app_conf_dir">conf</string>
+    <string name="app_conf_file">netutils.properties</string>
+    <string name="app_stats_dir">stats</string>
+    <string name="app_stats_file">stats-</string>
+    <string name="app_gm_log_file">GroupManager.log</string>
+    <string name="app_mockets_conf_file">mockets.conf</string>
+
+    <!-- MENU -->
+    <string name="app_menu_preferences">Settings</string>
+    <string name="app_menu_exit">Exit</string>
+
+    <!-- STRING ARRAYS -->
+    <string-array name="protocols_array">
+        <item>Mockets</item>
+        <item>StreamMockets</item>
+        <item>TCP</item>
+        <item>UDP</item>
+    </string-array>
+
+    <string-array name="modes_array">
+        <item>Stream</item>
+        <item>Interval</item>
+    </string-array>
+
+    <string-array name="bytes_array">
+        <item>B</item>
+        <item>kB</item>
+        <item>MB</item>
+    </string-array>
+
+    <string-array name="intervals_array">
+        <item>50 msec</item>
+        <item>100 msec</item>
+        <item>200 msec</item>
+        <item>500 msec</item>
+        <item>1 sec</item>
+        <item>2 sec</item>
+        <item>5 sec</item>
+    </string-array>
+
+    <!-- UI LABELS -->
+    <string name="btFindTarget">Find host..</string>
+    <string name="tvBuildVersion">Build version:</string>
+    <string name="tvConfDir">Conf. directory:</string>
+    <string name="tvNetworkInterface">Net. interface:</string>
+    <string name="tvTargetHost">Target:</string>
+    <string name="actvSelectedTargetHost">Enter target host</string>
+    <string name="actvTargetDone">Done</string>
+    <string name="tvNetworkProtocol">Network protocol:</string>
+    <string name="tvPacketSize">Msg. size:</string>
+    <string name="tvInterval">Interval:</string>
+    <string name="tvPacketLossSent">Packet loss (sent):</string>
+    <string name="btSend">Send</string>
+    <string name="btStart">Start</string>
+    <string name="btStop">Stop</string>
+    <string name="tvSelectMode">Select mode:</string>
+    <string name="tvMessagesSent">Messages sent:</string>
+    <string name="tvBytesSent">Bytes sent:</string>
+    <string name="tvMessagesReceived">Messages received:</string>
+    <string name="tvBytesReceived">Bytes received:</string>
+    <string name="tvDeviceModel">Device model:</string>
+    <string name="btStatistics">Statistics</string>
+    <string name="tvMode">Mode:</string>
+    <string name="tvGeneralStatistics">General Statistics</string>
+    <string name="tvPacketLossReceived">Packet loss (received):</string>
+    <string name="tvMocketsStatistics">Mockets Statistics</string>
+    <string name="tvLastContactTime">Last contact time:</string>
+    <string name="tvPacketsSent">Packets sent:</string>
+    <string name="tvPacketsReceived">Packets received:</string>
+    <string name="tvMessageSize">Message size (B, kB or MB)</string>
+
+    <!-- KEYS -->
+    <string name="discovery_config_enabled">us.ihmc.android.util.netutils.DISCOVERY_CONFIG_ENABLED</string>
+    <string name="discovery_service_bound">us.ihmc.android.util.netutils.DISCOVERY_SERVICE_BOUND</string>
+    <string name="discovery_port">us.ihmc.android.util.netutils.DISCOVERY_PORT</string>
+    <string name="discovery_transport">us.ihmc.android.util.netutils.DISCOVERY_TRANSPORT</string>
+    <string name="discovery_local_peer">us.ihmc.android.util.netutils.DISCOVERY_LOCAL_PEER</string>
+    <string name="discovery_remote_peer">us.ihmc.android.util.netutils.DISCOVERY_REMOTE_PEER</string>
+    <string name="discovery_peer_list">us.ihmc.android.util.netutils.DISCOVERY_PEER_LIST</string>
+
+    <string name="transport_local_host">us.ihmc.android.util.netutils.TRANSPORT_LOCAL_HOST</string>
+    <string name="transport_local_port">us.ihmc.android.util.netutils.TRANSPORT_LOCAL_PORT</string>
+    <string name="transport_remote_host">us.ihmc.android.util.netutils.TRANSPORT_REMOTE_HOST</string>
+    <string name="transport_remote_port">us.ihmc.android.util.netutils.TRANSPORT_REMOTE_PORT</string>
+    <string name="transport_protocol">us.ihmc.android.util.netutils.TRANSPORT_PROTOCOL</string>
+    <string name="transport_mode">us.ihmc.android.util.netutils.TRANSPORT_MODE</string>
+    <string name="transport_msg_size">us.ihmc.android.util.netutils.TRANSPORT_MSG_SIZE</string>
+    <string name="transport_interval">us.ihmc.android.util.netutils.TRANSPORT_INTERVAL</string>
+
+    <string name="stats_file_path">us.ihmc.android.util.netutils.STATS_FILE_PATH</string>
+    <string name="stats_mockets_monitor_port">us.ihmc.android.util.netutils.STATS_MOCKETS_MONITOR_PORT</string>
+
+    <!-- STATS -->
+    <string name="stats_remote_host">RemoteHost</string>
+    <string name="stats_remote_port">RemotePort</string>
+    <string name="stats_protocol">Protocol</string>
+    <string name="stats_mode">Mode</string>
+    <string name="stats_message_size">MessageSize</string>
+    <string name="stats_messages_sent">MessagesSent</string>
+    <string name="stats_bytes_sent">BytesSent</string>
+    <string name="stats_messages_received">MessagesReceived</string>
+    <string name="stats_bytes_received">BytesReceived</string>
+    <string name="stats_lost_packets_sent">LostPackets(Sent)</string>
+    <string name="stats_lost_packets_received">LostPackets(Received)</string>
+    <string name="stats_throughput_sent">Throughput(Sent)</string>
+    <string name="stats_throughput_received">Throughput(Received)</string>
+
+    <string name="stats_mockets_last_contact_time">MocketsLastContactTime</string>
+    <string name="stats_mockets_packets_sent">MocketsPacketsSent</string>
+    <string name="stats_mockets_bytes_sent">MocketsBytesSent</string>
+    <string name="stats_mockets_retransmits">MocketsRetransmits</string>
+    <string name="stats_mockets_bytes_received">MocketsBytesReceived</string>
+    <string name="stats_mockets_packets_received">MocketsPacketsReceived</string>
+    <string name="stats_mockets_duplicated_discarded_packets">MocketsDuplicatedDiscardedPackets</string>
+    <string name="stats_mockets_no_room_discarded_packets">MocketsNoRoomDiscardedPackets</string>
+    <string name="stats_mockets_reassembly_skipped_discarded_packets">MocketsReassemblySkippedDiscardedPackets</string>
+    <string name="stats_mockets_estimated_round_trip_time">MocketsEstimatedRoundTripTime</string>
+    <string name="stats_mockets_unacknowledged_data_size">MocketsUnacknowledgedDataSize</string>
+    <string name="stats_mockets_pending_data_size">MocketsPendingDataSize</string>
+    <string name="stats_mockets_pending_packet_queue_size">MocketsPendingPacketQueueSize</string>
+    <string name="stats_mockets_reliable_sequenced_data_size">MocketsReliableSequencedDataSize</string>
+    <string name="stats_mockets_reliable_sequenced_packet_queue_size">MocketsReliableSequencedPacketQueueSize</string>
+
+    <!-- PREFERENCES -->
+
+    <!-- Main -->
+    <string name="pref_main_title">Main</string>
+    <string name="aci_groupmanager_nodeUUID">aci.groupmanager.nodeUUID</string>
+    <string name="aci_groupmanager_nodeUUID_title">Peer ID</string>
+    <string name="aci_groupmanager_nodeUUID_default"></string>
+
+    <!-- Transport -->
+    <string name="pref_transport_title">Transport</string>
+    <string name="netutils_tcp_port">netutils.tcp.port</string>
+    <string name="netutils_tcp_port_default">9000</string>
+    <string name="netutils_tcp_port_title">TCP port</string>
+    <string name="netutils_tcp_control_port">netutils.tcp.control.port</string>
+    <string name="netutils_tcp_control_port_default">9001</string>
+    <string name="netutils_tcp_control_port_title">TCP control port</string>
+    <string name="netutils_mockets_port">netutils.mockets.port</string>
+    <string name="netutils_mockets_port_default">9002</string>
+    <string name="netutils_mockets_port_title">Mockets port</string>
+
+    <string name="netutils_mockets_stream_port">netutils.mockets.stream.port</string>
+    <string name="netutils_mockets_stream_port_default">9004</string>
+    <string name="netutils_mockets_stream_port_title">Mockets (StreamMocket) port</string>
+
+    <string name="netutils_udp_port">netutils.udp.port</string>
+    <string name="netutils_udp_port_default">9003</string>
+    <string name="netutils_udp_port_title">UDP port</string>
+
+    <string name="netutils_udp_multicast_enabled">netutils.udp.multicast.enabled</string>
+    <string name="netutils_udp_multicast_enabled_default">true</string>
+    <string name="netutils_udp_multicast_enabled_title">Enable UDP Multicast</string>
+
+    <string name="netutils_mode">netutils.mode</string>
+    <string name="netutils_mode_default">Stream</string>
+    <string name="netutils_mode_title">Mode</string>
+
+    <string name="netutils_msg_size">netutils.msg.size</string>
+    <string name="netutils_msg_size_default">1024</string>
+    <string name="netutils_msg_size_max">1024</string>
+    <string name="netutils_msg_size_title">Message size</string>
+
+    <string name="netutils_interval">netutils.interval</string>
+    <string name="netutils_interval_default">1000</string>
+    <string name="netutils_interval_title">Interval</string>
+
+    <string name="netutils_remote_host">netutils.remote.host</string>
+    <string name="netutils_remote_host_default">127.0.0.1</string>
+    <string name="netutils_remote_host_title">Remote host</string>
+
+    <string name="netutils_local_host">netutils.local.host</string>
+    <string name="netutils_local_host_default">127.0.0.1</string>
+    <string name="netutils_local_host_title">Local host</string>
+
+    <!-- Discovery -->
+    <string name="pref_discovery_title">Discovery</string>
+    <!-- <string name="aci_groupmanager_wifiIFs">aci.groupmanager.wifiIFs</string> -->
+    <string name="aci_groupmanager_netIFs">aci.groupmanager.netIFs</string>
+    <string name="aci_groupmanager_netIFs_title">Discovery transport</string>
+    <string name="aci_groupmanager_netIFs_dialog">Select transport mode</string>
+    <string name="aci_groupmanager_netIFs_default">UDP_MULTICAST</string>
+    <string name="aci_groupmanager_netIFs_default_summary">UDP_MULTICAST</string>
+    <string-array name="pref_protocol_array_entries">
+        <item>UDP_MULTICAST</item>
+        <item>UDP_MULTICAST_NORELAY</item>
+        <item>UDP_BROADCAST</item>
+    </string-array>
+    <string name="aci_groupmanager_port">aci.groupmanager.port</string>
+    <string name="aci_groupmanager_port_title">Discovery port</string>
+    <string name="aci_groupmanager_port_default">7000</string>
+    <string name="aci_groupmanager_ping_hopcount">aci.groupmanager.ping.hopcount</string>
+    <string name="aci_groupmanager_ping_hopcount_title">Ping hop count</string>
+    <string name="aci_groupmanager_ping_hopcount_default">3</string>
+    <string name="aci_groupmanager_ping_interval">aci.groupmanager.ping.interval</string>
+    <string name="aci_groupmanager_ping_interval_title">Ping interval</string>
+    <string name="aci_groupmanager_ping_interval_default">1000</string>
+    <string name="aci_groupmanager_info_interval">aci.groupmanager.info.interval</string>
+    <string name="aci_groupmanager_info_interval_title">Info interval</string>
+    <string name="aci_groupmanager_info_interval_default">10000</string>
+</resources>
